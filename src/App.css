@@ -1,68 +1,54 @@
+body {
+  background-color: #1b1717;
+}
+
 /* Nav CSS */
+.navbar {
+  padding: 1vw;
+  background-color: #eeebdd;
+}
+
+.navbar-brand img {
+  margin-right: 1vw;
+}
+
+.navbar button {
+  background-color: #810000;
+  color: #eeebdd;
+}
 
 /* Banner CSS */
-.banner {
-  background-color: rgba(59, 4, 4, 0.671);
-  height: 30vh;
-  display: flex;
+.banner,
+.banner-title-section {
+  background-color: #810000;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.banner-title-section {
+  height: 60vh;
+}
+
+.banner-title {
+  margin-top: 15vh;
+  text-align: center;
+  background-color: #1b1717;
+  color: #eeebdd;
+  padding: 3vh;
 }
 
 /* Card CSS */
 .card {
-  transition: 0.3s;
-  text-align: center;
-}
-
-.card img {
-  max-width: 100%;
-  max-height: 70%;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  width: 20vw;
-  background-color: transparent;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  transform: rotateY(180deg);
+  background-color: black;
 }
 
 /* Search CSS */
 .search-section {
   text-align: center;
+}
+.search-title-section {
+  padding: 2vh;
+  color: #eeebdd;
 }
 
 .search {
@@ -71,29 +57,55 @@
 }
 
 .search-input {
+  background-color: #eeebdd;
   padding: 10px;
   width: 40vw;
 }
 
 .search button {
+  background-color: #ce1212;
   padding: 10px;
   width: 10vw;
 }
 
 /* Results CSS */
 .results {
-  width: 70vw;
+  width: 60vw;
   margin: auto;
+  margin-top: 5vh;
 }
 
-.movies {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2vh;
-  border-bottom: 1px solid gray;
-  padding-bottom: 10px;
+.results .list-group-item {
+  background-color: #eeebdd;
 }
 
-.movies li {
+.results li {
   list-style: none;
+}
+
+.results button {
+  background-color: #810000;
+  color: #eeebdd;
+}
+
+.results button[disabled] {
+  background-color: #1b1717;
+}
+
+.details {
+  margin: 0 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #1b1717;
+  color: #eeebdd;
+  margin-top: 10vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .results {
+    width: auto;
+    margin: 5vh 2vw 0;
+  }
 }

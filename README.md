@@ -1,3 +1,5 @@
+From Create React App's documentation, it is known that enviroment variables are embedded into the build, meaning anyone can view them by inspecting the app's files. As this was not for production, and to keep it simple, the enviroment variables were treated as if it was being used in the server side.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -5,12 +5,16 @@ export default function Search({ callAPI }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!input) return;
+
     callAPI(input);
   }
 
   return (
     <section className="search-section">
-      <h2 className="search-title">Choose 5 movies to Nominate!</h2>
+      <div className="search-title-section">
+        <h2>Choose 5 movies to Nominate!</h2>
+      </div>
       <form className="search" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -18,7 +22,9 @@ export default function Search({ callAPI }) {
           onChange={(e) => setInput(e.target.value)}
           placeholder="Search by title."
         ></input>
-        <button type="submit">Search</button>
+        <button type="submit" className="btn-danger">
+          <i className="fas fa-search"></i>
+        </button>
       </form>
     </section>
   );
