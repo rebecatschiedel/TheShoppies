@@ -1,72 +1,17 @@
-From Create React App's documentation, it is known that enviroment variables are embedded into the build, meaning anyone can view them by inspecting the app's files. As this was not for production, and to keep it simple, the enviroment variables were treated as if it was being used in the server side.
+# The Shoppies
 
-# Getting Started with Create React App
+This project uses OMDB api to display movies based on the search terms for title. It is made with React without any extra libraries except the ones that come with create-react-app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Usage
 
-## Available Scripts
+The users can search for movies and nominate or denomiate them to create a list of 5 movies. These movies are also stored in the localStorage to give a more continuous user experience the next time they visit the page. The nominees appear below the navbar with the title-year information being displayed and an option to denominate them. The user can also clear all nominations with a single button from the top-right corner of the navbar.
 
-In the project directory, you can run:
+# Api
 
-### `npm start`
+The core concept of this app is to utilize api calls to present interactive data. The calls are made by JavaScript built-in function fect api and are wrapped in a try-catch block to handle errors. The users are also prevented from making empty requests and the app checks the response integrity before displaying the results on the page. Therefore, even the errors avoiding the catch block are being handled. The app makes two different api calls: one for a title search and one for a specific movie details.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+From Create React App's documentation, it is known that enviroment variables are embedded into the build, meaning anyone can view them by inspecting the app's files. As this was not for production, and to keep the app simple, the enviroment variables were treated as if they were being used in the server side.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Further Development
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app uses the useState hook to manage application state and passing props between components to keep track of data. With more features embedded, moving to a state management library or useContext and useReducer hooks combined with a custom API call hook might be considered.
