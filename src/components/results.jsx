@@ -6,7 +6,7 @@ export default function Results({ results, nominees, setNominees, error }) {
   function getMovie(id) {
     try {
       fetch(
-        `http://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+        `https://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
       )
         //handle error
         .then((res) => res.json())

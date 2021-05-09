@@ -15,7 +15,7 @@ function App() {
     setError("");
     try {
       fetch(
-        `http://www.omdbapi.com/?s=${title}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+        `https://www.omdbapi.com/?s=${title}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
       )
         .then((res) => res.json())
         .then((data) => {
