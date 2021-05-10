@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div>
-      <NavBar setNominees={setNominees} />
+      <NavBar setNominees={setNominees} nominees={nominees} />
       <Banner setNominees={setNominees} nominees={nominees} />
       <Search callAPI={callAPI} />
       <Results

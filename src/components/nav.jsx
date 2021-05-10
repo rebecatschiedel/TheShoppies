@@ -1,7 +1,7 @@
 import logo from "../images/logo.png";
 
-export default function NavBar({ setNominees }) {
-  function handleClick() {
+export default function NavBar({ nominees, setNominees }) {
+  function removeAllNominees() {
     setNominees([]);
     window.localStorage.removeItem("movies");
   }
@@ -18,9 +18,11 @@ export default function NavBar({ setNominees }) {
         />
         <b>The Shoppies</b>
       </div>
-      <button className="btn btn-md" onClick={handleClick}>
-        Remove all Nominees
-      </button>
+      {nominees.length !== 0 && (
+        <button className="btn btn-md" onClick={removeAllNominees}>
+          Remove all Nominees
+        </button>
+      )}
     </nav>
   );
 }

@@ -5,7 +5,13 @@ export default function Search({ callAPI }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!input) return;
+    const form = new FormData(e.target);
+    const search = form.get("search");
+    if (!search) return;
+
+    if (search === input) return;
+
+    setInput(search);
 
     callAPI(input);
   }
@@ -17,9 +23,9 @@ export default function Search({ callAPI }) {
       </div>
       <form className="search" onSubmit={handleSubmit}>
         <input
+          name="search"
           type="text"
           className="search-input"
-          onChange={(e) => setInput(e.target.value)}
           placeholder="Search by title."
         ></input>
         <button type="submit" className="btn-danger">
