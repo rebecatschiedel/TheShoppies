@@ -1,3 +1,5 @@
+Hosted website: [The Shoppies](http://rebecatschiedel.github.io/TheShoppies)
+
 # The Shoppies
 
 This project uses OMDB api to display movies based on the search terms for title. It is made with React without any extra libraries except the ones that come with create-react-app.
