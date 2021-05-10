@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="text-center p-3">
         2021 Shopify internship challenge
         <br />
-        <small>© Rebeca Guedes</small>
+        <small>© omdbapi.com</small>
       </div>
     </footer>
   );
